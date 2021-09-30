@@ -25,14 +25,15 @@
           <v-btn
             color="green darken-1"
             text
-            @click="dialog = false"
-          >
+            @click="dialog = false">
             Disagree
           </v-btn>
+
           <v-btn
             color="green darken-1"
             text
             @click="dialog = false"
+            to="/login"
           >
             Agree
           </v-btn>
@@ -43,6 +44,7 @@
 </template>
 
 <script>
+import SnackbarPopup from './SnackbarPopup'
 export default {
   name: 'LoginPopup',
   data() {
