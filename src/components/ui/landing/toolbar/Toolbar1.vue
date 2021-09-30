@@ -26,12 +26,12 @@
       <v-icon right>mdi-menu</v-icon>
     </v-btn>
 
-    <v-app-bar app flat height="80" color="transparent">
+    <v-app-bar app flat height="80" color="#263238">
       <v-container class="py-0 px-0 px-sm-2 fill-height">
-        <router-link to="#" class="d-flex align-center text-decoration-none mr-2">
+        <router-link to="/" class="d-flex align-center text-decoration-none mr-2">
           <img src="/images/v-logo-small.png" alt="" height="48" class="mr-1">
-          <span class="font-weight-black text-uppercase">
-            Carbon UI
+          <span class="font-weight-black">
+            CSGOSweep
           </span>
         </router-link>
 
@@ -48,10 +48,7 @@
         </div>
 
         <v-spacer></v-spacer>
-
-        <v-btn color="primary" large>
-          Log In
-        </v-btn>
+        <v-btn><LoginPopup></LoginPopup></v-btn>
       </v-container>
     </v-app-bar>
   </div>
@@ -59,8 +56,12 @@
 
 <script>
 import { menu2 as menu } from './menus.js'
+import LoginPopup from '../../../LoginPopup'
 
 export default {
+  components:{
+    LoginPopup
+  },
   data() {
     return {
       drawer: null,

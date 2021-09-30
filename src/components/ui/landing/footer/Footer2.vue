@@ -6,11 +6,11 @@
           <div>
             <router-link to="#" class="d-flex align-center text-decoration-none mr-2">
               <span class="font-weight-black text-uppercase text-h5 text-truncate">
-                Carbon UI
+                CSGOSweep
               </span>
             </router-link>
           </div>
-          <div class="text-body-1 mt-4 secondary--text text--lighten-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil debitis at dolorum.</div>
+          <div class="text-body-1 mt-4 secondary--text text--lighten-2">By accessing this website you agree to all of posted terms of service.</div>
         </v-col>
         <v-col cols="12" md="8">
           <div class="text-center text-md-right">
@@ -28,7 +28,7 @@
       </v-row>
       <v-divider class="my-4"></v-divider>
       <div class="text-center body-2 font-weight-bold secondary--text text--lighten-2">
-        Indielayer © All Rights Reserved
+        CSGOSweep © 2021 All Rights Reserved
       </div>
     </v-container>
   </v-footer>
@@ -39,23 +39,23 @@ export default {
   data() {
     return {
       links: [{
-        title: 'Home',
-        to: '#'
+        title: 'Contact',
+        to: '#support'
       }, {
-        title: 'About us',
-        to: '#'
+        title: 'Terms of Service',
+        to: '#terms'
       }, {
-        title: 'Services',
-        to: '#'
+        title: 'FAQ',
+        to: '#faq'
       }, {
-        title: 'Team',
-        to: '#'
+        title: 'AML',
+        to: '#aml'
       }, {
-        title: 'Blog',
-        to: '#'
+        title: 'Affiliates',
+        to: '#affiliates'
       }, {
-        title: 'Contact us',
-        to: '#'
+        title: 'Rewards',
+        to: '#rewards'
       }]
     }
   }

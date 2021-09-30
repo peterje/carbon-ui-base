@@ -1,6 +1,6 @@
 <template>
   <v-sheet>
-    <v-container class="py-4 py-lg-8">
+    <v-container class="py-4 py-lg-8" color="#424242">
       <div class="text-center">
         <div class="text-uppercase font-weight-bold body-2 primary--text mb-2">Support</div>
         <h2 class="text-h3 text-lg-h2">{{ title }}</h2>

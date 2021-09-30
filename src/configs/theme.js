@@ -1,11 +1,11 @@
 export default {
   // global theme for the app
-  globalTheme: 'light', // light | dark
+  globalTheme: 'dark', // light | dark
 
   // dark theme colors
   dark: {
     textbase: '#edf0f2',
-    background: '#05090c',
+    background: '#424242',
     surface: '#111b27',
     primary: '#0096c7',
     secondary: '#5c7f94',

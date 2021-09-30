@@ -13,17 +13,17 @@ export const menu1 = [{
 }]
 
 export const menu2 = [{
-  title: 'Product',
-  link: '#product'
+  title: 'Unboxing',
+  link: '/unboxing'
 }, {
-  title: 'Features',
-  link: '#features'
+  title: 'Coin Flip',
+  link: '/coinflip'
 }, {
-  title: 'Marketplace',
-  link: '#marketplace'
+  title: 'Case Battles',
+  link: '/battles'
 }, {
-  title: 'Company',
-  link: '#company'
+  title: 'Provably Fair',
+  link: '/provablyfair'
 }]
 
 export default {
