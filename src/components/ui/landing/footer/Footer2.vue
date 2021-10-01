@@ -17,12 +17,19 @@
             <v-btn fab small color="secondary" class="mx-2">
               <v-icon>mdi-twitter</v-icon>
             </v-btn>
-            <v-btn fab small color="secondary">
+            <v-btn
+              fab
+              small
+              color="secondary"
+              href="https://www.youtube.com/watch?v=KZfq9amWaJg"
+              target="_blank"
+            >
               <v-icon>mdi-instagram</v-icon>
             </v-btn>
           </div>
+
           <div class="text-center text-md-right mt-4">
-            <router-link v-for="(link, i) in links" :key="i" class="font-weight-bold text-decoration-none d-inline-block text-truncate text-h6 ml-2" to="#">{{ link.title }}</router-link>
+            <router-link v-for="(link, i) in links" :key="i" class="font-weight-bold text-decoration-none d-inline-block text-truncate text-h6 ml-2" to="/">{{ link.title }}</router-link>
           </div>
         </v-col>
       </v-row>
@@ -40,22 +47,22 @@ export default {
     return {
       links: [{
         title: 'Contact',
-        to: '#support'
+        to: '/support'
       }, {
         title: 'Terms of Service',
-        to: '#terms'
+        to: '/terms'
       }, {
         title: 'FAQ',
-        to: '#faq'
+        to: '/faq'
       }, {
         title: 'AML',
-        to: '#aml'
+        to: '/aml'
       }, {
         title: 'Affiliates',
-        to: '#affiliates'
+        to: '/affiliates'
       }, {
         title: 'Rewards',
-        to: '#rewards'
+        to: '/rewards'
       }]
     }
   }

@@ -4,26 +4,25 @@
   </v-app>
 </template>
 
-<script>
-import config from './configs'
-import Toolbar1 from './components/ui/landing/toolbar/Toolbar1'
-import Faq1Demo from './components/ui/landing/faq/Faq1Demo'
-import Footer2 from './components/ui/landing/footer/Footer2'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import HelloWorld from './components/HelloWorld.vue'
 
-/*
-|---------------------------------------------------------------------
-| Main Application Component
-|---------------------------------------------------------------------
-*/
-export default {
-  components:{
-
-  },
-  head: {
-    link: [
-      // adds config/icons into the html head tag
-      ...config.icons.map((href) => ({ rel: 'stylesheet', href }))
-    ]
+@Component({
+  components: {
+    HelloWorld
   }
-}
+})
+export default class App extends Vue {}
 </script>
+
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
