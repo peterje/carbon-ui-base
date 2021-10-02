@@ -32,14 +32,23 @@ export const routes = [{
     name: 'provablyfair',
     component: () => import(/* webpackChunkName: "Battles" */ '@/pages/ProvablyFair.vue')
 
-  }]
-}, {
-  path: '*',
-  component: () => import(/* webpackChunkName: "layout-error" */ '@/layouts/ErrorLayout.vue'),
-  children: [{
-    path: '',
-    name: 'error',
-    component: () => import(/* webpackChunkName: "error" */ '@/pages/error/NotFoundPage.vue')
+  },{
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "Login" */ '@/pages/Login.vue')
+  },{
+    path: '/terms',
+    name: 'terms',
+    component: () => import(/* webpackChunkName: "Terms" */ '@/pages/Terms.vue')
+  }, {
+    path: '*',
+    component:
+      () => import(/* webpackChunkName: "layout-error" */ '@/layouts/ErrorLayout.vue'),
+    children: [{
+      path: '',
+      name: 'error',
+      component: () => import(/* webpackChunkName: "error" */ '@/pages/error/NotFoundPage.vue')
+    }]
   }]
 }]
 

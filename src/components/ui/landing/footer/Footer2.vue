@@ -6,7 +6,7 @@
           <div>
             <router-link to="#" class="d-flex align-center text-decoration-none mr-2">
               <span class="font-weight-black text-uppercase text-h5 text-truncate">
-                CSGOSweep
+                SweepSkins
               </span>
             </router-link>
           </div>
@@ -29,7 +29,7 @@
           </div>
 
           <div class="text-center text-md-right mt-4">
-            <router-link v-for="(link, i) in links" :key="i" class="font-weight-bold text-decoration-none d-inline-block text-truncate text-h6 ml-2" to="/">{{ link.title }}</router-link>
+            <router-link v-for="(link, i) in links" :key="i" class="font-weight-bold text-decoration-none d-inline-block text-truncate text-h6 ml-2" :to="link.to">{{ link.title }}</router-link>
           </div>
         </v-col>
       </v-row>
@@ -47,7 +47,7 @@ export default {
     return {
       links: [{
         title: 'Contact',
-        to: '/support'
+        to: 'support'
       }, {
         title: 'Terms of Service',
         to: '/terms'

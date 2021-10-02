@@ -1,13 +1,5 @@
 <template>
   <div class="text-center">
-    <v-btn
-      dark
-      color="orange darken-2"
-      @click="snackbar = true"
-    >
-      Open Snackbar
-    </v-btn>
-
     <v-snackbar
       v-model="snackbar"
       :timeout="timeout"
@@ -29,10 +21,23 @@
 </template>
 
 <script>
-export default {
-  name: 'SnackbarPopup'
-}
+import LoginPopup from './LoginPopup'
+// class SnackbarPopup extends LoginPopup {
+//   closeLoginDialog() {
+//     LoginPopup.loginDialog = false
+//   }
 
+export default {
+  name: 'SnackbarPopup',
+  data() {
+    return {
+      snackbar: false,
+      text: 'My timeout is set to 2000.',
+      timeout: 2000
+    }
+  }
+
+}
 </script>
 
 <style scoped>

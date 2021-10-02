@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Toolbar1></Toolbar1>
-    <Footer2></Footer2>
   </div>
 </template>
 
@@ -11,8 +9,6 @@ import Footer2 from '../components/ui/landing/footer/Footer2'
 export default {
   name: 'Coinflip',
   components:{
-    Toolbar1,
-    Footer2
   }
 }
 </script>

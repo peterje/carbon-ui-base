@@ -31,7 +31,7 @@
         <router-link to="/" class="d-flex align-center text-decoration-none mr-2">
           <img src="/images/v-logo-small.png" alt="" height="48" class="mr-1">
           <span class="font-weight-black">
-            CSGOSweep
+            SweepSkins
           </span>
         </router-link>
 
