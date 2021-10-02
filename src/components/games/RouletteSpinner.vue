@@ -99,6 +99,10 @@ class RouletteSpinner extends Vue {
   }
 
   created() : void {
+    this.start_timer()
+  }
+
+  start_timer() {
     this.countdown_end = new Date()
     this.seconds_to_roll = this.roll_time
     this.countdown_end.setSeconds(this.countdown_end.getSeconds() + this.roll_time)
@@ -111,6 +115,7 @@ class RouletteSpinner extends Vue {
     this.time = (this.countdown_end.getTime() - now.getTime()) / (this.roll_time * 10)
     this.seconds_to_roll--
     if (this.time <= 0) {
+      clearInterval(this.countdown)
       this.spin()
     }
   }
@@ -142,9 +147,7 @@ class RouletteSpinner extends Vue {
   }
 
   post_spin_movement(e: TransitionEvent) {
-    const now = new Date()
-
-    this.countdown_end.setSeconds(now.getSeconds() + this.roll_time)
+    this.start_timer()
     this.seconds_to_roll = this.roll_time
     for (const card of this.$refs['cards-1']) {
       const el = card.$el

@@ -48,7 +48,8 @@
         </div>
 
         <v-spacer></v-spacer>
-        <v-btn><LoginPopup></LoginPopup></v-btn>
+        <div><LoginPopup></LoginPopup></div>
+        <div>{{this.uid}}</div>
       </v-container>
     </v-app-bar>
   </div>
@@ -57,13 +58,20 @@
 <script>
 import { menu2 as menu } from './menus.js'
 import LoginPopup from '../../../LoginPopup'
+import firebase from 'firebase/compat'
+import { AuthGetters } from '../../../../store/modules/auth/getters'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
+  computed:{
+    ...mapGetters({ uid: AuthGetters.GET_UID })
+  },
   components:{
     LoginPopup
   },
   data() {
     return {
+      user: firebase.auth().currentUser,
       drawer: null,
       menu
     }
